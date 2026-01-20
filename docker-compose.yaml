@@ -6,15 +6,16 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        - NODE_ENV=${NODE_ENV:-production}
-        - NITRO_PRESET=${NITRO_PRESET:-node-server}
-    image: fmhy-docs
+        - NODE_ENV=production
+        - NITRO_PRESET=node-server
+    image: fmhy-docs:latest
     container_name: docs
     restart: unless-stopped
     ports:
       - '4173:4173'
     env_file:
       - .env
+
 networks:
   fmhy:
     driver: bridge
