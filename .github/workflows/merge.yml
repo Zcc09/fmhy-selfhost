@@ -26,7 +26,6 @@ jobs:
           
           # 2. Force-restore your custom files from the 'hosting' branch
           git checkout HEAD -- docker-compose.yaml
-          git checkout HEAD -- .env
           
           # 3. Finalize the merge
           git commit -m "Hourly sync from main (preserved custom config)" || echo "No changes to sync"
