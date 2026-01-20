@@ -2,6 +2,7 @@ services:
   docs:
     container_name: docs
     image: ghcr.io/zcc09/fmhy-selfhost:latest
+    pull_policy: always
     restart: unless-stopped
     ports:
       - '4173:4173'
