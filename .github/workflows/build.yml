@@ -2,12 +2,11 @@ name: Build and Push FMHY Image
 on:
   push:
     branches:
-      - hosting # Triggers when hosting branch is updated
-  workflow_dispatch: # Allows manual trigger
+      - hosting
+  workflow_dispatch:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build-and-push:
@@ -19,6 +18,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      # THIS IS THE FIX: Lowercase the repo name
+      - name: Lowercase repo name
+        run: |
+          echo "IMAGE_NAME=${GITHUB_REPOSITORY@L}" >> ${GITHUB_ENV}
 
       - name: Log in to the Container registry
         uses: docker/login-action@v3
@@ -32,7 +36,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository }}:latest
+          tags: ghcr.io/${{ env.IMAGE_NAME }}:latest
           build-args: |
             NODE_ENV=production
             NUXT_PUBLIC_REVISION=production
