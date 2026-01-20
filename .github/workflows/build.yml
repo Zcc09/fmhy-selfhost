@@ -19,7 +19,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # THIS IS THE FIX: Lowercase the repo name
       - name: Lowercase repo name
         run: |
           echo "IMAGE_NAME=${GITHUB_REPOSITORY@L}" >> ${GITHUB_ENV}
@@ -37,6 +36,3 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/${{ env.IMAGE_NAME }}:latest
-          build-args: |
-            NODE_ENV=production
-            NUXT_PUBLIC_REVISION=production
