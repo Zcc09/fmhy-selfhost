@@ -5,9 +5,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      args:
-        - NODE_ENV=production
-        - NITRO_PRESET=node-server
     image: ghcr.io/zcc09/fmhy-selfhost:latest
     container_name: docs
     restart: unless-stopped
@@ -15,7 +12,6 @@ services:
       - '4173:4173'
     env_file:
       - .env
-
 networks:
   fmhy:
     driver: bridge
