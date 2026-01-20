@@ -4,11 +4,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - NODE_ENV=${NODE_ENV:-production}
+        - NITRO_PRESET=${NITRO_PRESET:-node-server}
     image: fmhy-docs
     container_name: docs
     restart: unless-stopped
     ports:
       - '4173:4173'
-
-networks:
-  fmhy:
+    env_file:
+      - .env
