@@ -1,6 +1,7 @@
 services:
   docs:
-    networks: [fmhy]
+    networks:
+      - fmhy
     build:
       context: .
       dockerfile: Dockerfile
@@ -14,3 +15,6 @@ services:
       - '4173:4173'
     env_file:
       - .env
+networks:
+  fmhy:
+    driver: bridge
