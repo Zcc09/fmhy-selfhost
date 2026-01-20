@@ -1,17 +1,15 @@
 services:
   docs:
-    networks:
-      - fmhy
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: ghcr.io/zcc09/fmhy-selfhost:latest
     container_name: docs
+    image: ghcr.io/zcc09/fmhy-selfhost:latest
     restart: unless-stopped
     ports:
       - '4173:4173'
     env_file:
       - .env
+    networks:
+      - fmhy
+
 networks:
   fmhy:
     driver: bridge
