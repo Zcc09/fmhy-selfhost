@@ -667,7 +667,6 @@
 * [Rhythm Plus](https://rhythm-plus.com), [2](https://rhythmplus.io/) - Rhythm Game / [Discord](https://discord.com/invite/ZGhnKp4) / [GitHub](https://github.com/henryzt/Rhythm-Plus-Music-Game)
 * [Bemuse](https://bemuse.ninja/) - Rhythm Game / [Discord](https://discord.gg/aB6ucmx) / [GitHub](https://github.com/bemusic/bemuse)
 * [Pulsus](https://www.pulsus.cc/play/) - 3x3 Letter Tile Rhythm Game
-* [Sans Fight](https://jcw87.github.io/c2-sans-fight/) - Undertale Fight Simulator
 * [DB Evolution](https://www.txori.com/dbdevolution) - Dragon Ball Fighting Game
 * [Rooms](https://rooms.xyz/) - Room Design Game / [Discord](https://discord.gg/rooms)
 * [Haxball](https://www.haxball.com/) - Physics-Based Soccer
@@ -940,7 +939,6 @@
 * [Goblin Bet](https://goblin.bet/) - Bet on 1v1 Monster Fights
 * [The First Alkahistorian](https://nagshell.github.io/elemental-inception-incremental/) - Incremental Elemental Game
 * [FactoryIdle](https://factoryidle.com/) - Factory Idle Simulator
-* [Anti Matter Dimensions](https://ivark.github.io/) - Anti Matter Idle Game
 * [Antimatter Dimensions](https://ivark.github.io/) - Antimatter Idle Game / [Android](https://play.google.com/store/apps/details?id=kajfosz.antimatterdimensions) / [Discord](https://discord.gg/AntimatterDimensions)
 * [Theory of Magic](https://mathiashjelm.gitlab.io/arcanum/) - Magic Idle Game
 * [Succubox](https://www.glaielgames.com/succubox/) - Loot Box Idle Game
